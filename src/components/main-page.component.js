@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import video from '../assets/testVideo.mp4';
+import video from '../assets/testVideo1.mp4';
 
 export default class MainPage extends Component {
     constructor(props) {

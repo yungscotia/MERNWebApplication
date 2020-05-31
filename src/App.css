@@ -1,0 +1,272 @@
+.App {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.App-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px;
+}
+
+#root {
+  height: 100%;
+}
+
+@media (min-width: 650px ) {
+  .App {
+      background-position: center center;
+  }
+
+  .App-content {
+      align-items: flex-end;
+      justify-content: center;
+  }
+}
+
+#rightImage {
+  height: 100%;
+  background-image: url('../src/assets/Walk\ on\ Water.jpg');
+  background-size: cover;
+  background-position: 50%;
+  filter: brightness(80%);
+  opacity: .9;
+  transition: transform 2s ease;
+  z-index: 0;
+  transform: scale(1);
+}
+
+#height100 {
+  height: 100%;
+}
+
+.leftHover:hover ~ .welcome-video {
+  opacity: 1;
+  transition: .5s ease;
+  transform: scale(1.2); 
+  filter: brightness(100%);
+}
+
+.rightHover:hover ~ #rightImage {
+  opacity: 1;
+  transition: .5s ease;
+  transform: scale(1.2); 
+  filter: brightness(100%);
+  opacity: 1;
+}
+
+.leftHover {
+  float: left;
+  width: 43%;
+  height: 100%;
+  bottom: 0%;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  transition: 1s ease;
+  left: 0px;
+  top: 0px;
+}
+
+.leftHover.is-active {
+  opacity: 0;
+  width: 0;
+  height: 100%;
+  transition: 1s ease;
+}
+
+.rightHover {
+  float: right;
+  width: 43%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  transition: 1s ease;
+  right: 0px;
+  top: 0px;
+}
+
+.leftside {
+  padding: 0px;
+  overflow: hidden;
+  border-right: 2px solid black;
+  transition: 2s ease;
+  width: 50%;
+  height: 100%;
+  transition: 1.5s ease;
+}
+
+.rightside {
+  padding: 0px;
+  overflow: hidden;
+  border-left: 2px solid black;
+  transition: 2s ease;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+}
+
+.leftside.is-active {
+  padding: 0px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transition: 1.5s ease;
+}
+
+.rightside.is-active {
+  position: absolute;
+  opacity: 0;
+  width: 0px;
+  height: 100%;
+  transition: 1.5s ease;
+  left: 100%;
+}
+
+.text-overlay {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  z-index: 1;
+  background: transparent;
+}
+
+.leftHover:hover .leftButton {
+  background-image: url('../src/assets/First\ Time\ Purple.png');
+  width: 10vw;
+  height: 8.33vw;
+  transition: .5s ease;
+} 
+
+.rightHover:hover .rightButton {
+  background-image: url('../src/assets/Been\ Here\ Blue.png');
+  width: 10vw;
+  height: 8.33vw;
+  transition: .5s ease;
+}
+
+.leftHover:hover .arrowleft {
+  transition: .5s ease;
+  left: 0vh;
+  opacity: 0;
+}
+
+.rightHover:hover .arrowright {
+  transition: .5s ease;
+  right: 0vh;
+  opacity: 0;
+}
+
+.arrowleft {
+  float: left;
+  position: relative;
+  top: 50%;
+  left: 40%;
+  color: aliceblue;
+  transform: translate(-50%, -50%);
+  transition: .5s ease;
+  height: 2vw;
+  width: 2vw;
+}
+
+.arrowright {
+  float: right;
+  position: relative;
+  top: 50%;
+  right: 35%;
+  color: aliceblue;
+  transform: translate(-50%, -50%);
+  transition: .5s ease;
+  height: 2vw;
+  width: 2vw;
+}
+
+.welcome-video {
+  position: 50%;
+  left: 0;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  transition: 2s ease;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+.welcome-video.is-active {
+  position: fixed;
+  left: 0;
+  object-fit: cover;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  transition: 2s ease;
+  filter: brightness(100%);
+}
+
+.rightHoverLink {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+}
+
+.after-video {
+  position: fixed;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+}
+
+.after-video.is-active {
+  position: fixed;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transition: 1s ease;
+}
+
+.leftButton {
+  background-image: url('../src/assets/First\ Time\ White.png');
+  background-size: cover;
+  position: absolute;
+  width: 8vw;
+  height: 6.67vw;
+  transition: .5s ease;
+  transform: scale(1.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rightButton {
+  background-image: url('../src/assets/Been\ Here\ White.png');
+  background-size: cover;
+  position: absolute;
+  width: 8vw;
+  height: 6.67vw;
+  transition: .5s ease;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow-slide-left {
+  width: 50%;
+  height: 25%;
+  position: fixed;
+  top: 70%;
+}
+
+.arrow-slide-right {
+  width: 50%;
+  height: 25%;
+  position: fixed;
+  top: 70%;
+  right: 0;
+}
